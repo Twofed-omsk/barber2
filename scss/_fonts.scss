@@ -1,12 +1,15 @@
-@font-face{
-  font-weight: normal;
+@font-face {
   font-family: "PT Sans Narrow";
+  font-weight: normal;
   font-style: normal;
-  src: url("/barber2/fonts/PTSansNarrow-Regular.woff") format(woff), url("/barber2/fonts/PTSansNarrow-Regular.woff2") format(wpff2);
+  src: url("../fonts/PTSansNarrow-Regular.woff") format(woff),
+  url("../fonts/PTSansNarrow-Regular.woff2") format(wpff2);
 }
-@font-face{
+
+@font-face {
   font-weight: bold;
   font-family: "PT Sans Narrow";
   font-style: normal;
-  src: url("/barber2/fonts/PTSansNarrow-Bold.woff") format("woff"), url("/barber2/fonts/PTSansNarrow-Regular.woff2") format("woff2");
+  src: url("../fonts/PTSansNarrow-Bold.woff") format("woff"),
+  url("../fonts/PTSansNarrow-Regular.woff2") format("woff2");
 }

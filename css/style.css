@@ -342,17 +342,17 @@ template {
 }
 
 @font-face {
-  font-weight: normal;
   font-family: "PT Sans Narrow";
+  font-weight: normal;
   font-style: normal;
-  src: url("/barber2/fonts/PTSansNarrow-Regular.woff") format(woff), url("/barber2/fonts/PTSansNarrow-Regular.woff2") format(wpff2);
+  src: url("../fonts/PTSansNarrow-Regular.woff") format(woff), url("../fonts/PTSansNarrow-Regular.woff2") format(wpff2);
 }
 
 @font-face {
   font-weight: bold;
   font-family: "PT Sans Narrow";
   font-style: normal;
-  src: url("/barber2/fonts/PTSansNarrow-Bold.woff") format("woff"), url("/barber2/fonts/PTSansNarrow-Regular.woff2") format("woff2");
+  src: url("../fonts/PTSansNarrow-Bold.woff") format("woff"), url("../fonts/PTSansNarrow-Regular.woff2") format("woff2");
 }
 
 body {
@@ -361,7 +361,7 @@ body {
   padding: 0;
   font-size: 18px;
   line-height: 27px;
-  font-family: "PT Sans Narrow", "Arial" sans-serif;
+  font-family: "PT Sans Narrow", sans-serif;
   color: #f7f4f1;
   font-style: normal;
   background-color: #292929;
@@ -570,19 +570,19 @@ img {
   .main-nav--nojs .main-nav__toggle {
     display: none;
   }
-  .main-nav--nojs .main-nav__toggle .main-nav__wrapper {
+  .main-nav--nojs .main-nav__wrapper {
     position: static;
     min-height: 0;
   }
-  .main-nav--nojs .main-nav__toggle .site-list__item {
+  .main-nav--nojs .site-list__item {
     display: block;
   }
-  .main-nav--nojs .main-nav__toggle .site-list__item--active a {
+  .main-nav--nojs .site-list__item--active a {
     padding-right: 21px;
     padding-left: 21px;
     text-align: left;
   }
-  .main-nav--nojs .main-nav__toggle .user-list__item {
+  .main-nav--nojs .user-list__item {
     display: block;
     background-color: #6a4d38;
   }
@@ -599,7 +599,7 @@ img {
     width: 100%;
     height: 400px;
     background-color: #000000;
-    background-image: url(/barber2/img/backgr.jpg);
+    background-image: url(/img/backgr.jpg);
     background-repeat: no-repeat;
     background-position: center -9px;
   }
@@ -613,6 +613,10 @@ img {
   .main-nav {
     width: auto;
     margin: 0;
+    background-color: #000000;
+  }
+  .main-nav__toggle {
+    display: none;
   }
   .main-nav__wrapper {
     display: -webkit-box;
@@ -626,13 +630,100 @@ img {
   }
   .site-list {
     width: 570px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .site-list__item {
+    margin-right: 32px;
+  }
+  .site-list__item:last-child {
+    margin-right: 0;
+  }
+  .site-list__item a {
+    padding: 0;
+    padding-top: 25px;
+    padding-bottom: 23px;
+    background: none;
+    border: none;
+  }
+  .site-list__item a[href]:hover {
+    color: #826550;
+    background-color: #000000;
+  }
+  .site-list__item a[href]:active {
+    color: #ffffff;
+    background-color: #000000;
+    opacity: 0.3;
+  }
+  .site-list__item--active {
+    position: relative;
+  }
+  .site-list__item--active::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    left: 0;
+    height: 3px;
+    background: #826550;
   }
   .user-list {
     width: 60px;
   }
+  .user-list__login {
+    width: 60px;
+    height: 70px;
+    padding: 0;
+    font-size: 0;
+  }
+  .user-list__login:hover .user-list__login-icon {
+    opacity: 1;
+  }
+  .user-list__login:hover .user-list__login-icon polygon {
+    fill: #826550;
+  }
+  .user-list__login:active .user-list__login-icon {
+    opacity: 0.3;
+  }
+  .user-list__login:active .user-list__login-icon polygon {
+    fill: #ffffff;
+  }
+  .user-list__login-icon {
+    top: 29px;
+    left: 12px;
+  }
 }
 
 @media (min-width: 1200px) {
+  .site-list {
+    width: 780px;
+  }
+  .site-list__item {
+    margin-right: 0;
+  }
+  .site-list__item--active:after {
+    right: 30px;
+    left: 30px;
+  }
+  .site-list__item a {
+    padding-right: 31px;
+    padding-left: 31px;
+  }
+  .site-list__item a[href]:hover {
+    color: #000000;
+    background-color: #ffffff;
+  }
+  .site-list__item a[href]:active {
+    color: rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+    opacity: 1;
+  }
   .page-header__logo {
     height: 648px;
     background-position: center 0;
@@ -643,6 +734,41 @@ img {
   }
   .main-nav__wrapper {
     width: 960px;
+  }
+  .user-list {
+    width: auto;
+    max-width: 160px;
+  }
+  .user-list__login {
+    position: relative;
+    width: auto;
+    height: auto;
+    padding: 25px 30px 23px 50px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .user-list__login:hover {
+    color: #000000;
+    background-color: #fff;
+  }
+  .user-list__login:active {
+    color: rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+  }
+  .user-list__login:hover .user-list__login-icon {
+    opacity: 0.3;
+  }
+  .user-list__login:hover .user-list__login-icon polygon {
+    fill: #000000;
+  }
+  .user-list__login:active .user-list__login-icon {
+    opacity: 0.1;
+  }
+  .user-list__login-icon {
+    left: 15px;
   }
 }
 

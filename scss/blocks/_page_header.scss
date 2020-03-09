@@ -154,8 +154,10 @@
     height: 100%;
     box-shadow: inset 4px 0 7px -2px rgba(0, 0, 0, 0.4);
   }
-  .main-nav--nojs .main-nav__toggle{
+  .main-nav--nojs{ 
+    & .main-nav__toggle{
     display: none;
+    }
     & .main-nav__wrapper{
       position: static;
       min-height: 0;
@@ -185,7 +187,7 @@
     width: 100%;
     height: 400px;
     background-color: #000000;
-    background-image: url(/barber2/img/backgr.jpg);
+    background-image: url(/img/backgr.jpg);
     background-repeat: no-repeat;
     background-position: center -9px;
     & img{
@@ -200,6 +202,10 @@
   .main-nav{
     width: auto;
     margin: 0;
+    background-color: #000000;
+  }
+  .main-nav__toggle{
+    display: none;
   }
   .main-nav__wrapper{
     display: flex;
@@ -209,13 +215,101 @@
   }
   .site-list{
     width: 570px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
+  .site-list__item{
+    margin-right: 32px;
+    &:last-child{
+      margin-right: 0;
+    }
+    & a{
+      padding: 0;
+      padding-top: 25px;
+      padding-bottom: 23px;
+      background: none;
+      border: none;
+    }
+    & a[href]{
+      &:hover{
+        color: #826550;
+        background-color: #000000;
+      }
+      &:active{
+        color: #ffffff;
+        background-color: #000000;
+        opacity: 0.3;
+      }
+    }
+    &--active{
+      position: relative;
+      &::after{
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -3px;
+        left: 0;
+        height: 3px;
+        background: #826550;
+      }
+    }
+  }
+
   .user-list{
     width: 60px;
+  }
+  .user-list__login{
+    width: 60px;
+    height: 70px;
+    padding: 0;
+    font-size: 0;
+    &:hover .user-list__login-icon{
+      opacity: 1;
+      polygon{
+        fill: #826550;
+      }
+    }
+    &:active .user-list__login-icon{
+      opacity: 0.3;
+      polygon{
+        fill: #ffffff;
+      } 
+    }
+  }
+  .user-list__login-icon{
+    top: 29px;
+    left: 12px;
   }
 
 }
 @media (min-width: $desktop-width){
+  .site-list{
+    width: 780px;
+  }
+  .site-list__item{
+    margin-right: 0;
+    &--active:after{
+      right: 30px;
+      left: 30px;
+    }
+    & a{
+      padding-right: 31px;
+      padding-left: 31px;
+    }
+    & a[href]{
+      &:hover{
+        color: #000000;
+        background-color: #ffffff;
+      }
+      &:active {
+        color: rgba(0, 0, 0, 0.3);
+        background-color: #ffffff;
+        opacity: 1;
+      }
+    }
+  }
+  
   .page-header__logo{
     height: 648px;
     background-position: center 0;
@@ -226,6 +320,41 @@
   }
   .main-nav__wrapper{
     width: 960px;
+  }
+  .user-list{
+    width: auto;
+    max-width: 160px;
+  }
+  .user-list__login{
+    position: relative;
+    width: auto;
+    height: auto;
+    padding: 25px 30px 23px 50px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    &:hover{
+      color: #000000;
+      background-color: #fff;
+    }
+    &:active{
+      color: rgba(0, 0, 0, 0.3);
+      background-color: #fff;
+    }
+    &:hover .user-list__login-icon{
+      opacity: 0.3;
+      polygon{
+        fill: #000000
+      }
+    }
+    &:active .user-list__login-icon{
+      opacity: 0.1;
+    }
+  }
+  .user-list__login-icon{
+    left: 15px;
   }
 
 }
