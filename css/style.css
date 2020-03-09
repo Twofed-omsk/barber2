@@ -404,7 +404,7 @@ img {
 .main-nav {
   position: relative;
   width: 320px;
-  min-width: 51px;
+  min-height: 51px;
   margin: 0 auto;
   background-color: #826550;
 }
@@ -553,7 +553,7 @@ img {
     right: 0;
     left: 70px;
     z-index: 10;
-    min-height: 60vh;
+    min-height: 80vh;
     background-color: #6a4d38;
   }
   .main-nav--opened .main-nav__wrapper::before {
