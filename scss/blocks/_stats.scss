@@ -1,5 +1,5 @@
 .stats{
-  width: 320px;
+  width: 95%;
   margin: 0 auto;
 
 }
@@ -118,6 +118,7 @@
   }
   .stats__list{
     display: flex;
+    margin-bottom: 45px;
   }
   .stats__legend--top{
     display: block;
