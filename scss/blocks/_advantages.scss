@@ -103,10 +103,21 @@
     // margin-bottom: 30px;
   }
   .advantages__title{
+    position: relative;
     text-align: left;
     margin: 0;
     padding: 0;
     margin-bottom: 10px;
+    // &:before{
+    //   content: "";
+    //   position: absolute;
+    //   width: 0;
+    //   height: 0;
+    //   border-left: 25px solid transparent;
+    //   border-right: 25px solid transparent;
+    //   border-top: 10px solid #000000;
+    //   top: 150px;
+    // }
   }
   .advantages__toggles{
     display: none;
