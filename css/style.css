@@ -875,7 +875,7 @@ img {
 @media (min-width: 768px) {
   .stats {
     width: 640px;
-    margin-top: -185px;
+    margin-top: -173px;
   }
   .stats__header {
     position: relative;
@@ -934,9 +934,11 @@ img {
         flex-wrap: wrap;
   }
   .stats__list tr {
-    width: 250px;
+    width: 50%;
     padding: 25px 35px;
     padding-bottom: 28px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   .stats__list td {
     display: block;
@@ -959,19 +961,27 @@ img {
 }
 
 @media (min-width: 1200px) {
-  .user-list {
-    width: 160px;
-  }
   .stats {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     width: 960px;
     margin-top: -160px;
+    margin-bottom: 176px;
+  }
+  .stats__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 640px;
+    margin: 0;
   }
   .stats__header {
-    display: block;
     width: 240px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .stats__header::before {
     top: 22px;
@@ -987,12 +997,7 @@ img {
   }
   .stats__legend--top {
     width: auto;
-  }
-  .stats__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 640px;
+    margin-top: auto;
   }
 }
 
@@ -1122,6 +1127,49 @@ img {
     margin-bottom: 10px;
   }
   .advantages__toggles {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .advantages__wrapper {
+    width: 960px;
+  }
+  .advantages__list {
+    width: 100%;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .advantages__item {
+    margin: 0;
+    padding: 0;
+    padding: 0px 30px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    text-align: center;
+  }
+  .advantages__item:before {
+    left: 120px;
+    top: -180px;
+  }
+  .advantages__title {
+    text-align: center;
+  }
+  .advantages__description {
+    text-align: center;
+    font-weight: 400px;
+  }
+  .advantages__item::after {
     display: none;
   }
 }
