@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="no-js">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css">
     <title>Барбершоп "Бородинский"</title>
+    <script>
+      document.documentElement.classList.replace('no-js', 'js');
+    </script>
   </head>
   <body>
     <header class="page-header">
@@ -80,27 +83,23 @@
         <small class="stats__legend stats__legend--bottom"><sup>*</sup> - приведенные данные ложь</small>
       </section>
       <section class="advantages">
-        <div class="advantages__wrapper slider">
+        <div class="advantages__wrapper swiper-container">
           <h2 class="visually-hidden"></h2>
-          <ul class="advantages__list slider__list">
-            <li class="advantages__item advantages__item--fast slider__item">
+          <ul class="advantages__list swiper-wrapper">
+            <li class="advantages__item advantages__item--fast swiper-slide">
               <h3 class="advantages__title">Быстро</h3>
               <p class="advantages__description">Мы делаем свою работу быстро! Два часа пролетят незаметно и вы - счастливый обладатель стильной стрижки-минутуки.</p>
             </li>
-            <li class="advantages__item advantages__item--cool slider__item">
+            <li class="advantages__item advantages__item--cool swiper-slide">
               <h3 class="advantages__title">Круто</h3>
               <p class="advantages__description">Забудьте как вы стриглись раньше. Мы сделаем из вас звезду футбола или киною Во всяком случае внешне.</p>
             </li>
-            <li class="advantages__item advantages__item--money slider__item">
+            <li class="advantages__item advantages__item--money swiper-slide">
               <h3 class="advantages__title">Дорого</h3>
               <p class="advantages__description">Наши мастера - профессионалы своего дела и не могут стоить дёшево. К тому же, разве цена не дает определенный статус?</p>
             </li>
           </ul>
-          <p class="advantages__toggles slider__togles">
-            <button type="button" class="slider__togle">1</button>
-            <button type="button" class="slider__togle">2</button>
-            <button type="button" class="slider__togle">3</button>
-          </p>
+          <div class="swiper-pagination"></div>
         </div>
       </section>
       <section class="news">
@@ -197,5 +196,13 @@
       </div>
     </footer>
     <script src="js/index.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script>
+       var swiper = new Swiper('.swiper-container', {
+       pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+    </script>
   </body>
 </html>
