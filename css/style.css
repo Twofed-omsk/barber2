@@ -1773,7 +1773,7 @@ img {
 
 @media (min-width: 768px) {
   .advantages__wrapper {
-    width: 640px;
+    max-width: 1100px;
   }
   .advantages__list {
     display: -webkit-box;

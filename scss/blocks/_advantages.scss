@@ -69,7 +69,7 @@
 // }
 @media (min-width: $tablet-width){
   .advantages__wrapper{
-    width: 640px;
+    max-width: 1100px;
   }
   .advantages__list{
     display: flex;

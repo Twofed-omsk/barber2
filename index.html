@@ -199,7 +199,13 @@
     <script src="js/swiper.min.js"></script>
     <script>
        var swiper = new Swiper('.swiper-container', {
-       pagination: {
+        breakpoints: {
+          768: {
+            slidesPerView: 3
+          },
+        },
+        updateOnWindowResize: true,
+        pagination: {
         el: '.swiper-pagination',
       },
     });
