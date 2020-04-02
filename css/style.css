@@ -1693,14 +1693,34 @@ img {
   }
 }
 
+.advantages {
+  position: relative;
+  width: 95%;
+  margin: auto;
+}
+
+.advantages:after {
+  content: '';
+  z-index: 99999;
+  border-left: 250px solid transparent;
+  border-right: 250px solid transparent;
+  border-top: 50px solid #911010;
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+}
+
 .advantages__list {
   list-style: none;
   padding: 0;
+  padding-bottom: 80px;
 }
 
 .advantages__wrapper {
   width: 95%;
   margin: 0 auto;
+  position: relative;
 }
 
 .advantages__title {
@@ -1771,6 +1791,11 @@ img {
   margin-bottom: 34px;
 }
 
+.swiper-pagination {
+  display: block;
+  margin-bottom: 50px;
+}
+
 @media (min-width: 768px) {
   .advantages__wrapper {
     max-width: 640px;
@@ -1811,6 +1836,7 @@ img {
   .advantages__description {
     padding-left: 0;
     text-align: left;
+    max-width: 510px;
   }
   .advantages__title {
     position: relative;
@@ -1820,6 +1846,9 @@ img {
     margin-bottom: 10px;
   }
   .advantages__toggles {
+    display: none;
+  }
+  .swiper-pagination {
     display: none;
   }
 }
@@ -1870,7 +1899,9 @@ img {
 .news__wrapper {
   background-color: #f8f5f2;
   color: #000000;
+  padding-top: 30px;
   padding-bottom: 20px;
+  position: relative;
 }
 
 .news__title {
@@ -1899,21 +1930,26 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  margin-right: 12px;
   color: #ffffff;
+}
+
+.flag {
   background-color: #000000;
-  padding: 0;
-  padding: 9px 12px 18px 12px;
-  width: 50px;
-  height: 40px;
+  min-width: 50px;
+  height: 50px;
+  margin: 0;
+  margin-right: 12px;
+  display: inline-block;
+  position: relative;
 }
 
-.news__day {
-  font-size: 30px;
-}
-
-.news__list {
-  list-style: none;
+.flag::after {
+  content: '';
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 10px solid #000000;
+  position: absolute;
+  top: 50px;
 }
 
 .news__item {
@@ -1928,11 +1964,24 @@ img {
           align-items: center;
 }
 
+.news__day {
+  font-size: 30px;
+}
+
+.news__list {
+  list-style: none;
+}
+
 .news__to-all {
   display: block;
-  width: 90%;
-  margin: auto;
-  border: 1px solid #000000;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  margin: 0px 20px 0px 20px;
+  padding: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 1px solid #e5ddd5;
   text-align: center;
   text-decoration: none;
   color: #000000;

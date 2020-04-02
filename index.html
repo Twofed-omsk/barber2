@@ -92,7 +92,7 @@
             </li>
             <li class="advantages__item advantages__item--cool swiper-slide">
               <h3 class="advantages__title">Круто</h3>
-              <p class="advantages__description">Забудьте как вы стриглись раньше. Мы сделаем из вас звезду футбола или киною Во всяком случае внешне.</p>
+              <p class="advantages__description">Забудьте как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино. Во всяком случае внешне.</p>
             </li>
             <li class="advantages__item advantages__item--money swiper-slide">
               <h3 class="advantages__title">Дорого</h3>
@@ -107,21 +107,28 @@
           <h2 class="news__title">Новости и акции</h2>
           <ul class="news__list">
             <li class="news__item">
-              <time class="news__date" datetime="2017-09-29">
-                <b class="news__day">29</b>сент
-              </time>
+              <div class="flag">
+                <time class="news__date" datetime="2017-09-29">
+                  <b class="news__day">29</b>сент
+                </time>  
+              </div>
               <p class="news__text">Нас наконец - то завезли Егермайстер! Теперь вы можете пропустить стаканчик во время стрижкию</p>
             </li>
             <li class="news__item">
-              <time class="news__date" datetime="2017-09-19 ">
-                <b class="news__day">19</b>сент
-              </time>
+              <div class="flag">
+                <time class="news__date" datetime="2017-09-19">
+                  <b class="news__day">19</b>сент
+                </time>  
+              </div>
               <p class="news__text">В нашей команде пополнение, Борос "Бритва" Стригунец, обладатель множества титулов и наград пополнил наши стройные ряды. Спешите записаться.</p>
             </li>
             <li class="news__item">
-              <time class="news__date" datetime="2017-09-09">
-                <b class="news__day">9</b>сент
-              </time>
+              <div class="flag">
+                <time class="news__date" datetime="2017-09-09">
+                  <b class="news__day">9</b>сент
+                </time>  
+              </div>
+
               <p class="news__text">Все дорожает, а наши стрижки нет! Как так? Приходите, подстригитесь и узнаете, в чем здесь подвох!</p>
             </li>
           </ul>
@@ -197,81 +204,6 @@
     </footer>
     <script src="js/index.js"></script>
     <script src="js/swiper.min.js"></script>
-    <script>
-      (function() {
-
-'use strict';
-
-// breakpoint where swiper will be destroyed
-// and switches to a dual-column layout
-const breakpoint = window.matchMedia( '(min-width:786px)' );
-
-// keep track of swiper instances to destroy later
-let mySwiper;
-
-//////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////
-
-const breakpointChecker = function() {
-
-  // if larger viewport and multi-row layout needed
-  if ( breakpoint.matches === true ) {
-
-    // clean up old instances and inline styles when available
-  if ( mySwiper !== undefined ) mySwiper.destroy( true, true );
-
-  // or/and do nothing
-  return;
-
-    // else if a small viewport and single column layout needed
-    } else if ( breakpoint.matches === false ) {
-
-      // fire small viewport version of swiper
-      return enableSwiper();
-
-    }
-
-};
-
-//////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////
-
-const enableSwiper = function() {
-
-  mySwiper = new Swiper ('.swiper-container', {
-
-    loop: true,
-    
-    slidesPerView: 'auto',
-
-    centeredSlides: true,
-
-    a11y: true,
-    grabCursor: true,
-
-    // pagination
-    pagination: '.swiper-pagination',
-    paginationClickable: true,
-
-  });
-
-};
-
-//////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////
-
-// keep an eye on viewport size changes
-breakpoint.addListener(breakpointChecker);
-
-// kickstart
-breakpointChecker();
-
-
-
-})(); /* IIFE end */
-    </script>
+    <script src="js/slider.js"></script>
   </body>
 </html>
