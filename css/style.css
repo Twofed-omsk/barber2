@@ -1879,18 +1879,19 @@ img {
 
 .news {
   position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 .news::before {
   content: '';
-  padding-top: 2%;
   position: absolute;
   top: 0;
   left: 0px;
   right: 0px;
   height: 35px;
-  background: -webkit-gradient(linear, left bottom, right top, color-stop(49.5%, transparent), color-stop(50%, #292929)) left/50.025% 100% no-repeat, -webkit-gradient(linear, right bottom, left top, color-stop(49.5%, transparent), color-stop(50%, #292929)) right/50.025% 100% no-repeat;
-  background: linear-gradient(to right top, transparent 49.5%, #292929 50%) left/50.025% 100% no-repeat, linear-gradient(to left top, transparent 49.5%, #292929 50%) right/50.025% 100% no-repeat;
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(48.5%, transparent), color-stop(50%, #292929)) left/50.025% 100% no-repeat, -webkit-gradient(linear, right bottom, left top, color-stop(48.5%, transparent), color-stop(50%, #292929)) right/50.025% 100% no-repeat;
+  background: linear-gradient(to right top, transparent 48.5%, #292929 50%) left/50.025% 100% no-repeat, linear-gradient(to left top, transparent 48.5%, #292929 50%) right/50.025% 100% no-repeat;
   z-index: 999;
 }
 
@@ -1984,5 +1985,151 @@ img {
   text-align: center;
   text-decoration: none;
   color: #000000;
+}
+
+.reviews {
+  color: #292929;
+  background-color: #f8f5f2;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: relative;
+}
+
+.reviews__title {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.reviews__item {
+  margin: 0;
+  padding: 0;
+  margin-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.reviews__author-picture {
+  margin-right: 20px;
+}
+
+.reviews__author-image {
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  height: 51px;
+}
+
+.reviews-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+  margin-right: 40px;
+}
+
+.reviews__author-name {
+  font-size: 24px;
+  line-height: 27px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 16px;
+  margin-right: 100px;
+}
+
+.reviews__text {
+  display: block;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 60px;
+  margin-right: 40px;
+}
+
+.reviews__write {
+  display: none;
+}
+
+.swiper-pagination {
+  margin-bottom: 10px;
+}
+
+.page-footer {
+  position: relative;
+  padding-top: 60px;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.page-footer:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0px;
+  right: 0px;
+  height: 35px;
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(48.5%, transparent), color-stop(50%, #f8f5f2)) left/50.025% 100% no-repeat, -webkit-gradient(linear, right bottom, left top, color-stop(48.5%, transparent), color-stop(50%, #f8f5f2)) right/50.025% 100% no-repeat;
+  background: linear-gradient(to right top, transparent 48.5%, #f8f5f2 50%) left/50.025% 100% no-repeat, linear-gradient(to left top, transparent 48.5%, #f8f5f2 50%) right/50.025% 100% no-repeat;
+  z-index: 999;
+}
+
+.contacts__title {
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.contacts__text {
+  font-size: 18px;
+  line-height: 27px;
+  margin-bottom: 60px;
+}
+
+.contacts__phone-mobile, .contacts__phone {
+  text-decoration: none;
+  color: #f8f5f2;
+}
+
+.contacts__phone-mobile {
+  display: none;
+}
+
+.social__list {
+  list-style: none;
+}
+
+.page-footer__copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.copyright__link {
+  text-decoration: none;
+  color: #f8f5f2;
+}
+
+.social__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 70px;
+}
+
+.contacts__adress {
+  display: block;
+  margin-bottom: 40px;
 }
 /*# sourceMappingURL=style.css.map */

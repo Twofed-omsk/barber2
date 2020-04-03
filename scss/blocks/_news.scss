@@ -1,15 +1,15 @@
 .news{
   position: relative;
+  margin: 0;padding: 0;
   &::before{
     content: '';
-    padding-top: 2%;
     position: absolute;
     top: 0;
     left: 0px;
     right: 0px;
     height: 35px;
-    background: linear-gradient(to right top, transparent 49.5%, $bg-darkgrey 50%) left / 50.025% 100% no-repeat,
-    linear-gradient(to left top, transparent 49.5%,     $bg-darkgrey 50%) right / 50.025% 100% no-repeat;
+    background: linear-gradient(to right top, transparent 48.5%, $bg-darkgrey 50%) left / 50.025% 100% no-repeat,
+    linear-gradient(to left top, transparent 48.5%,  $bg-darkgrey 50%) right / 50.025% 100% no-repeat;
     z-index: 999;
   }
 }

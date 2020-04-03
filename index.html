@@ -136,39 +136,31 @@
         </div>
       </section>
       <section class="reviews">
-        <div class="reviews__wrapper">
+        <div class="reviews__wrapper swiper-container">
           <h2 class="reviews__title">Отзывы о нас</h2>
-          <a href="#" class="rewiews__write button">Оставить свой</a>
-          <div class="reviews__list slider__list">
-            <blockquote class="rewiews__item slider__item">
+          <a href="#" class="reviews__write button">Оставить свой</a>
+          <div class="reviews__list swiper-wrapper">
+            <blockquote class="reviews__item swiper-slide">
               <p class="reviews__author-picture">
-                <img src="" width="50" height="33" alt="Фото Тревиса Баклера" class="reviews__author-image">
+                <img src="img/Photo-1.png"  alt="Фото Тревиса Баклера" class="reviews__author-image">
               </p>
-              <cite class="reviews__author-name">Тревис Баклер</cite>
-              <p class="reviews__text">Спасибо за лысину! Был в Москве, заскочил побриться, что-бы было видно новую татуировку!</p>
+              <div class="reviews-description">              <cite class="reviews__author-name">Тревис Баркер</cite>
+                <p class="reviews__text">Спасибо за лысину! Был в Москве, заскочил побриться, что-бы было видно новую татуировку!</p>
+              </div>
             </blockquote>
-            <blockquote class="rewiews__item">
-              <p class="reviews__author">
-                <img src="" width="50" height="33" alt="" class="reviews__author-image">
+            <blockquote class="reviews__item swiper-slide">
+              <p class="reviews__author-picture">
+                <img src="img/Photo-1.png" width="50" height="33" alt="Фото Ивана Бородайло" class="reviews__author-image">
               </p>
-              <cite class="reviews__author-name"></cite>
-              <p class="reviews__text"></p>
+              <div class="reviews-description">
+                <cite class="reviews__author-name">Иван Бородайло</cite>
+                <p class="reviews__text">В Бородинском ваша борода в надежных руках!</p>
+  
+              </div>
             </blockquote>
-            <blockquote class="rewiews__item">
-              <p class="reviews__author">
-                <img src="" width="50" height="33" alt="Фото Ивана Бородайло" class="reviews__author-image">
-              </p>
-              <cite class="reviews__author-name">Иван Бородайло</cite>
-              <p class="reviews__text">В Бородинском ваша борода в надежных руках!</p>
-            </blockquote>
-            <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-            <button class="reviews__next" type="button">Следующий отзыв</button>
           </div>
-          <p class="reviews__toggles slider__toggles">
-            <button class="slider__toggle" type="button">1</button>
-            <button class="slider__toggle" type="button">2</button>
-            <button class="slider__toggle" type="button">3</button>
-          </p>
+          <div class="swiper-pagination"></div>
+
         </div>
       </section>
     </main>
@@ -176,7 +168,10 @@
       <div class="footer__wrapper">
         <div class="page-footer__contacts contacts">
           <b class="contacts__title">Барбершоп "Бородинский"</b>
-          <p class="contacts__text">г. Санкт-Питербург, ул. Большая Конюшечная 19/8<br>
+          <p class="contacts__text">
+            <span class="contacts__adress">
+              г. Санкт-Питербург, ул. Большая<br> Конюшечная 19/8<br>
+            </span>
             <a href="tel:+79139663445" class="contacts__phone">
               <span class="contacts__phone-mobile">Тел.:</span>+7(913)966-34-45
             </a>
@@ -185,13 +180,19 @@
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a href="#" class="social__link social__link--vkontakte">Мы Вконтакте</a>
+              <a href="#" class="social__link social__link--vkontakte">
+                <img src="img/vk.png" alt="Мы Вконтакте">
+              </a>
             </li>
             <li class="social__item">
-              <a href="#" class="social__link social__link--facebook">Мы в Фейсбуке</a>
+              <a href="#" class="social__link social__link--facebook">
+                <img src="img/fb.png" alt="Мы в Фейсбуке">
+              </a>
             </li>
             <li class="social__item">
-              <a href="#" class="social__link social__link--instagram">Мы в Инстаграмме</a>
+              <a href="#" class="social__link social__link--instagram">
+                <img src="img/insta.png" alt="Мы в Инстаграмме">
+              </a>
             </li>
           </ul>
         </div>
