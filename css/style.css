@@ -1695,20 +1695,6 @@ img {
 
 .advantages {
   position: relative;
-  width: 95%;
-  margin: auto;
-}
-
-.advantages:after {
-  content: '';
-  z-index: 99999;
-  border-left: 250px solid transparent;
-  border-right: 250px solid transparent;
-  border-top: 50px solid #911010;
-  position: absolute;
-  bottom: -50px;
-  left: 0;
-  right: 0;
 }
 
 .advantages__list {
@@ -1789,11 +1775,6 @@ img {
   margin: auto;
   margin-top: 44px;
   margin-bottom: 34px;
-}
-
-.swiper-pagination {
-  display: block;
-  margin-bottom: 50px;
 }
 
 @media (min-width: 768px) {
@@ -1896,10 +1877,27 @@ img {
   }
 }
 
+.news {
+  position: relative;
+}
+
+.news::before {
+  content: '';
+  padding-top: 2%;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  right: 0px;
+  height: 35px;
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(49.5%, transparent), color-stop(50%, #292929)) left/50.025% 100% no-repeat, -webkit-gradient(linear, right bottom, left top, color-stop(49.5%, transparent), color-stop(50%, #292929)) right/50.025% 100% no-repeat;
+  background: linear-gradient(to right top, transparent 49.5%, #292929 50%) left/50.025% 100% no-repeat, linear-gradient(to left top, transparent 49.5%, #292929 50%) right/50.025% 100% no-repeat;
+  z-index: 999;
+}
+
 .news__wrapper {
   background-color: #f8f5f2;
   color: #000000;
-  padding-top: 30px;
+  padding-top: 40px;
   padding-bottom: 20px;
   position: relative;
 }
@@ -1909,7 +1907,8 @@ img {
   line-height: 30px;
   font-family: "PT Sans Narrow";
   text-align: center;
-  margin-bottom: 34px;
+  margin: 0;
+  margin-top: 30px;
 }
 
 .news__text {
