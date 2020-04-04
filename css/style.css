@@ -1988,7 +1988,7 @@ img {
 }
 
 .reviews {
-  color: #292929;
+  color: #000000;
   background-color: #f8f5f2;
   margin: 0;
   padding: 0;
@@ -1999,7 +1999,11 @@ img {
 .reviews__title {
   padding: 0;
   margin: 0;
+  font-size: 30px;
+  line-height: 30px;
   text-align: center;
+  margin-top: 20px;
+  margin-bottom: 25px;
 }
 
 .reviews__item {
@@ -2059,6 +2063,12 @@ img {
 
 .swiper-pagination {
   margin-bottom: 10px;
+  color: #000000;
+}
+
+.reviews-pagination {
+  color: #000000;
+  border-color: #000000;
 }
 
 .page-footer {
